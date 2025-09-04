@@ -1,0 +1,40 @@
+backup:
+  items: ['./important', '/home/user/data']
+  backup_dir: './backups'
+  compression: 'gz'      # Options: gz, bz2, None
+
+mysql:
+  enabled: false
+  user: 'root'
+  password: ''
+  database: 'company_db'
+  host: 'localhost'
+  backup_dir: './backups/mysql'
+
+postgres:
+  enabled: false
+  user: 'postgres'
+  password: ''
+  database: 'mydb'
+  host: 'localhost'
+  backup_dir: './backups/postgres'
+
+cloud:
+  enabled: false
+  provider: 'aws'
+  bucket: ''
+  access_key: ''
+  secret_key: ''
+
+email:
+  enabled: false
+  smtp_server: 'smtp.gmail.com'
+  port: 587
+  username: 'your-email@gmail.com'
+  password: ''
+  from: 'backup-alert@company.com'
+  to: 'admin@company.com'
+
+logging:
+  file: './backup.log'
+  level: 'INFO'
